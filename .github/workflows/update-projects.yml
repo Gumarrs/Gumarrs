@@ -1,0 +1,52 @@
+name: Update public projects list
+
+on:
+  schedule:
+    - cron: '17 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update project list from GitHub API
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const username = 'Gumarrs';
+          const readmePath = 'README.md';
+          const readme = fs.readFileSync(readmePath, 'utf8');
+          const start = '<!-- PROJECTS:START -->';
+          const end = '<!-- PROJECTS:END -->';
+          const api = `https://api.github.com/users/${username}/repos?type=public&sort=pushed&direction=desc&per_page=100`;
+          (async () => {
+            const response = await fetch(api, {headers: {'Accept':'application/vnd.github+json','Authorization':`Bearer ${process.env.GH_TOKEN}`}});
+            if (!response.ok) throw new Error(`GitHub API request failed: ${response.status}`);
+            const repos = await response.json();
+            const selected = repos.filter(r => !r.fork && r.name.toLowerCase() !== username.toLowerCase())
+              .sort((a,b) => new Date(b.pushed_at || b.updated_at) - new Date(a.pushed_at || a.updated_at)).slice(0,6);
+            const body = selected.length ? selected.map(r => {
+              const desc = r.description ? r.description.replace(/[\r\n]+/g,' ').replace(/[<>]/g,'') : 'Public repository';
+              const lang = r.language ? ` · ${r.language}` : '';
+              const date = r.pushed_at ? ` · updated ${new Date(r.pushed_at).toISOString().slice(0,10)}` : '';
+              return `- [**${r.name}**](${r.html_url}) — ${desc}${lang}${date}`;
+            }).join('\n') : '- No public projects found yet.';
+            const section = `${start}\n<!-- Automatically lists up to 6 recently pushed public repositories. -->\n${body}\n${end}`;
+            if (!readme.includes(start) || !readme.includes(end)) throw new Error('Project markers not found in README');
+            const updated = readme.replace(new RegExp(`${start}[\\s\\S]*?${end}`), section);
+            fs.writeFileSync(readmePath, updated);
+          })().catch(e => {console.error(e); process.exit(1)});
+          NODE
+      - name: Commit README changes if needed
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add README.md
+          git diff --cached --quiet || git commit -m 'chore: refresh recently updated public projects'
+          git push
