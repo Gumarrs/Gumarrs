@@ -39,13 +39,8 @@ Hi, I'm **Agus Marsadualan** (`Gumarrs`). I enjoy building web applications, exp
 ## 🚀 Recently Updated Public Projects
 
 <!-- PROJECTS:START -->
-<!-- Automatically lists up to 6 recently pushed public repositories. -->
-- [**gambar-yukk**](https://github.com/Gumarrs/gambar-yukk) — Public repository · TypeScript · updated 2026-11-13
-- [**Pulsa_Personal_Finance**](https://github.com/Gumarrs/Pulsa_Personal_Finance) — Public repository · Vue · updated 2026-11-12
-- [**Valora_Anime**](https://github.com/Gumarrs/Valora_Anime) — Public repository · TypeScript · updated 2026-11-10
-- [**test_1**](https://github.com/Gumarrs/test_1) — Public repository · Python · updated 2026-11-09
-- [**simulasi_transaksi**](https://github.com/Gumarrs/simulasi_transaksi) — Public repository · PHP · updated 2026-10-03
-- [**Stamp_Test**](https://github.com/Gumarrs/Stamp_Test) — Public repository · Python · updated 2026-07-03
+<!-- This section is automatically updated by .github/workflows/update-projects.yml -->
+- Projects will be listed here after the **Update public projects** workflow runs.
 <!-- PROJECTS:END -->
 
 
@@ -56,7 +51,7 @@ Hi, I'm **Agus Marsadualan** (`Gumarrs`). I enjoy building web applications, exp
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=Gumarrs&show_icons=true&hide_border=true&bg_color=101722&title_color=A9C7E8&icon_color=B9A4E8&text_color=D8DEE9&rank_icon=github" alt="GitHub stats" />
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Gumarrs&layout=compact&hide_border=true&bg_color=101722&title_color=A9C7E8&text_color=D8DEE9" alt="Most used languages" />
 
-<img src="https://github-readme-streak-stats.herokuapp.com?user=Gumarrs&hide_border=true&background=101722&ring=B9A4E8&fire=E7C9A5&currStreakLabel=A9C7E8&sideLabels=A9C7E8&dates=8899AA" alt="GitHub streak" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Gumarrs&theme=tokyonight&hide_border=true&background=0D1117&stroke=263445&ring=B9A4E8&fire=E7C9A5&currStreakNum=A9C7E8&sideNums=A9C7E8&currStreakLabel=A9C7E8&sideLabels=A9C7E8&dates=8FC7B5" width="90%" />
 
 </div>
 
