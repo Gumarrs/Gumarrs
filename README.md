@@ -40,12 +40,12 @@ Hi, I'm **Agus Marsadualan** (`Gumarrs`). I enjoy building web applications, exp
 
 <!-- PROJECTS:START -->
 <!-- Automatically lists up to 6 recently pushed public repositories. -->
+- [**cv_builder**](https://github.com/Gumarrs/cv_builder) — Bantuin bikin cv buat yang mager · TypeScript · updated 2026-11-24
 - [**gambar-yukk**](https://github.com/Gumarrs/gambar-yukk) — Public repository · TypeScript · updated 2026-11-13
 - [**Pulsa_Personal_Finance**](https://github.com/Gumarrs/Pulsa_Personal_Finance) — Public repository · Vue · updated 2026-11-12
 - [**Valora_Anime**](https://github.com/Gumarrs/Valora_Anime) — Public repository · TypeScript · updated 2026-11-10
 - [**test_1**](https://github.com/Gumarrs/test_1) — Public repository · Python · updated 2026-11-09
 - [**simulasi_transaksi**](https://github.com/Gumarrs/simulasi_transaksi) — Public repository · PHP · updated 2026-10-03
-- [**Stamp_Test**](https://github.com/Gumarrs/Stamp_Test) — Public repository · Python · updated 2026-07-03
 <!-- PROJECTS:END -->
 
 
