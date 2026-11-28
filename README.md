@@ -40,7 +40,7 @@ Hi, I'm **Agus Marsadualan** (`Gumarrs`). I enjoy building web applications, exp
 
 <!-- PROJECTS:START -->
 <!-- Automatically lists up to 6 recently pushed public repositories. -->
-- [**karier-kedua**](https://github.com/Gumarrs/karier-kedua) — Public repository · TypeScript · updated 2026-11-26
+- [**karier-kedua**](https://github.com/Gumarrs/karier-kedua) — Public repository · TypeScript · updated 2026-11-27
 - [**invitation**](https://github.com/Gumarrs/invitation) — Public repository · Vue · updated 2026-11-26
 - [**cv_builder**](https://github.com/Gumarrs/cv_builder) — Bantuin bikin cv buat yang mager · TypeScript · updated 2026-11-24
 - [**gambar-yukk**](https://github.com/Gumarrs/gambar-yukk) — Public repository · TypeScript · updated 2026-11-13
